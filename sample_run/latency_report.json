@@ -1,0 +1,13 @@
+{
+  "total_decisions": 2679,
+  "published_actions": 700,
+  "no_action_decisions": 1979,
+  "processing_elapsed_ms": 3741.393,
+  "decision_latency_ms": {
+    "p50": 0.04,
+    "p95": 3.034,
+    "max": 6.499
+  },
+  "decisions_over_60_seconds": 0,
+  "note": "Deterministic rule-based mock replay; measured local processing latency is not a production provider/network latency guarantee."
+}

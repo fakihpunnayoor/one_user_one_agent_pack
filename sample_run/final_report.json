@@ -1,0 +1,70 @@
+{
+  "replay": {
+    "decisions": 2679,
+    "actions": 700,
+    "goal_outcomes": {
+      "succeeded": 2,
+      "failed": 0,
+      "inconclusive": 698
+    },
+    "action_types": {
+      "home_page": 700
+    },
+    "no_action_reasons": {
+      "holdout_arm_no_action": 1090,
+      "no_available_titles_for_current_dialect": 64,
+      "stale_app_open_trigger": 430,
+      "viewer_already_has_open_goal": 375,
+      "mock_provider_fault_rejected:unsupported_claim": 1,
+      "model_provider_unavailable_fail_closed": 11,
+      "mock_provider_fault_rejected:malformed_output": 1,
+      "user_data_store_degraded_fail_closed": 6,
+      "no_measurable_eligible_goal": 1
+    },
+    "latency": {
+      "total_decisions": 2679,
+      "published_actions": 700,
+      "no_action_decisions": 1979,
+      "processing_elapsed_ms": 3741.393,
+      "decision_latency_ms": {
+        "p50": 0.04,
+        "p95": 3.034,
+        "max": 6.499
+      },
+      "decisions_over_60_seconds": 0,
+      "note": "Deterministic rule-based mock replay; measured local processing latency is not a production provider/network latency guarantee."
+    }
+  },
+  "pilot_randomized_itt": {
+    "arms": {
+      "holdout": {
+        "assigned_users": 1979,
+        "successes": 387,
+        "success_rate": 0.1956,
+        "success_rate_wilson_95_ci": [
+          0.1787,
+          0.2136
+        ],
+        "served_users": 0,
+        "intention_to_treat_denominator": "all assigned users"
+      },
+      "treatment": {
+        "assigned_users": 1912,
+        "successes": 349,
+        "success_rate": 0.1825,
+        "success_rate_wilson_95_ci": [
+          0.1659,
+          0.2005
+        ],
+        "served_users": 217,
+        "intention_to_treat_denominator": "all assigned users"
+      }
+    },
+    "treatment_minus_holdout_risk_difference": -0.0131,
+    "approx_95_ci_for_difference": [
+      -0.0377,
+      0.0115
+    ],
+    "interpretation": "Descriptive pilot estimate; confidence interval is a normal approximation. Assignment arm, not served status, defines the denominator."
+  }
+}
